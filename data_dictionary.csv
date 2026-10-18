@@ -1,0 +1,23 @@
+variable,role,definition
+recording_id,identifier,Unique identifier for one archived recording
+city,site,City in which the recording was made (24 cities)
+biome,site,"Biome band: temperate, tropical or arid"
+latitude,site,Decimal degrees; used to compute solar times
+longitude,site,Decimal degrees; used to compute solar times
+species,taxon,Species label for the recorded bird (30 species)
+body_mass_g,covariate,Body mass in grams; controls the allometric frequency baseline
+noise_db,predictor 1,Modelled road-traffic noise at the site (dB); 3.5% missing
+light_radiance,predictor 2,VIIRS night-time radiance (nW/cm2/sr); 2% missing
+month,covariate,"Month of recording (3-6, the breeding season)"
+temperature_c,covariate,Air temperature at the site
+equipment,covariate,Recording device class; controls instrument bias
+min_freq_hz,response,Minimum song frequency (Hz) - the spectral response
+dom_freq_hz,response,Dominant song frequency (Hz)
+bandwidth_hz,response,Spectral bandwidth (Hz)
+note_dur_ms,response,Mean note duration (ms)
+syllable_rate,response,Syllables per second
+onset_min,response,Minutes of dawn-song onset relative to sunrise (negative = before)
+cessation_min,response,Minutes of vocal cessation relative to sunset (positive = after)
+noise_floor_db,quality,Estimated noise floor of the file; used for quality screening
+low_quality_flag,quality,"Flagged as a low-quality file (retained, not deleted)"
+outlier_flag,quality,Flagged as a suspected equipment artefact
